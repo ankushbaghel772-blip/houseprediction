@@ -25,11 +25,13 @@ SECRET_KEY = 'django-insecure-pa(3($+5f9!)1--3s=vd)ymkkjb*4a8b%59r86_67y-zbfb4gt
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# Hosts allowed to access this Django application
 ALLOWED_HOSTS = [
-    "houseprediction-2-2ddk.onrender.com",
-    "localhost",
-    "127.0.0.1",
+    'houseprediction-4-tae4.onrender.com',
+    'localhost',
+    '127.0.0.1',
 ]
+
 
 # Application definition
 
@@ -44,6 +46,7 @@ INSTALLED_APPS = [
     'prediction',
 ]
 
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -54,7 +57,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
 ROOT_URLCONF = 'house_prediction.urls'
+
 
 TEMPLATES = [
     {
@@ -70,6 +75,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'house_prediction.wsgi.application'
 
@@ -116,14 +122,13 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
+# Static files
 # https://docs.djangoproject.com/en/6.1/howto/static-files/
 
 STATIC_URL = 'static/'
 
 
 # Email
-# https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration
 
 MAILERS = {
     'default': {
