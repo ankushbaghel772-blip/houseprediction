@@ -1,0 +1,9 @@
+{% extends "prediction/base.html" %}
+{% block content %}
+<div class="card">
+  <h2>Predicted Price</h2>
+  <div class="price">₹{{ price }}</div>
+  <p>{{ data.area }} sq.ft &middot; {{ data.bedrooms }} BHK &middot; {{ data.bathrooms }} bath &middot; {{ data.location }}</p>
+  <a class="btn" href="{% url 'home' %}">Predict Another</a>
+</div>
+{% endblock %}

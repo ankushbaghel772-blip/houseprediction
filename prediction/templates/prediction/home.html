@@ -1,0 +1,15 @@
+{% extends "prediction/base.html" %}
+{% block content %}
+<div class="card">
+  <h2>House Price Prediction</h2>
+  <form method="post">
+    {% csrf_token %}
+    {% for field in form %}
+      <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+      {{ field }}
+      {% for e in field.errors %}<div class="err">{{ e }}</div>{% endfor %}
+    {% endfor %}
+    <button type="submit">Predict Price</button>
+  </form>
+</div>
+{% endblock %}

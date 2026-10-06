@@ -1,0 +1,13 @@
+{% extends "prediction/base.html" %}
+{% block content %}
+<div class="card wide">
+  <h2>Prediction History</h2>
+  <table>
+    <tr><th>Date</th><th>Location</th><th>Area</th><th>Bed</th><th>Bath</th><th>Price</th></tr>
+    {% for i in items %}
+    <tr><td>{{ i.created_at|date:"d M Y, H:i" }}</td><td>{{ i.location }}</td><td>{{ i.area }}</td>
+        <td>{{ i.bedrooms }}</td><td>{{ i.bathrooms }}</td><td>₹{{ i.price_fmt }}</td></tr>
+    {% empty %}<tr><td colspan="6">No predictions yet.</td></tr>{% endfor %}
+  </table>
+</div>
+{% endblock %}

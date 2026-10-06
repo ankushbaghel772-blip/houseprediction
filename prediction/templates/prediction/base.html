@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}House Price Predictor{% endblock %}</title>
+<style>
+  body{font-family:system-ui,sans-serif;background:#f3f5f9;margin:0;color:#1f2937}
+  nav{background:#1e3a8a;padding:14px 24px}
+  nav a{color:#fff;text-decoration:none;margin-right:20px;font-weight:600}
+  .card{max-width:480px;margin:40px auto;background:#fff;padding:28px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+  .wide{max-width:800px}
+  label{display:block;margin-top:14px;font-weight:600}
+  input,select{width:100%;padding:10px;margin-top:6px;border:1px solid #cbd5e1;border-radius:8px;box-sizing:border-box}
+  button,.btn{display:inline-block;margin-top:20px;padding:12px 20px;background:#2563eb;color:#fff;border:0;border-radius:8px;font-size:1rem;cursor:pointer;text-decoration:none}
+  .price{font-size:2.2rem;font-weight:700;color:#15803d;margin:10px 0}
+  .err{color:#b91c1c;font-size:.85rem}
+  table{width:100%;border-collapse:collapse}
+  th,td{padding:10px;border-bottom:1px solid #e5e7eb;text-align:left}
+</style>
+</head>
+<body>
+<nav><a href="{% url 'home' %}">Predict</a><a href="{% url 'history' %}">History</a></nav>
+{% block content %}{% endblock %}
+</body>
+</html>
